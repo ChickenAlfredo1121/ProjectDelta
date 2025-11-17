@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* overarching  */
+* {
+  font-family: Poiret;
+}
+
+body {
+  background-color: #f3f3f3 !important;
+}
+
+/* Calendar grid container */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: #f3f3f3;
+  /* match the page */
+  border: 1px solid #ddd;
+}
+
+/* Weekday header boxes */
+.weekday {
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+
+/* days box being transparent */
+.day {
+  min-height: 110px;
+  border: 1px solid #ddd;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  background-color: transparent;
+  /* NO background */
+}
+
+/* moving day to top right */
+.day-number {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Assignment event box */
+.assignment {
+  background-color: #e6f0ff;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 18px;
+  font-size: 0.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+.assignment:hover {
+  background-color: #cce0ff;
+}
+
+/* Agenda list */
+.agenda-day {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.agenda-date {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.agenda-events .assignment {
+  margin-top: 4px;
+  font-size: 0.8rem;
+}
+
+.view-buttons .btn-segment {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  margin-left: -1px;
+  transition: background-color 0.2s ease;
+}
+
+.view-buttons .btn-segment:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.view-buttons .btn-segment:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.view-buttons .btn-segment.active {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+.view-buttons .btn-segment:hover:not(.active) {
+  background-color: #e6f7ff;
+}
+
+/* modal background */
+.assignment-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+
+/* positon above clicker */
+.assignment-modal-content {
+  position: absolute;
+  background: white;
+  width: 350px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  transform: none
+}
+
+/* close button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* assignment link */
+.modal-assignment-link {
+  display: inline-block;
+  margin: 8px 0 14px 0;
+  font-size: 1rem;
+  color: #0064d6;
+  text-decoration: underline;
+}
+
+#popup a {
+  font-size: 16px;
+  color: #0067b8;
+  text-decoration: underline;
+}
+
+#popup a:hover {
+  text-decoration: none;
+}
+
+.calendar-reference-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.calendar-reference-images img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-reference-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.calendar-reference-images img {
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+/* Make the first image slightly larger */
+/*they were slightly different sizes*/
+.calendar-reference-images img:first-child {
+  max-width: 55%;
+}
+
+/* Make the second image slightly smaller */
+.calendar-reference-images img:nth-child(2) {
+  max-width: 45%;
+}
