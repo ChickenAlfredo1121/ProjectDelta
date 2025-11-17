@@ -219,10 +219,11 @@ body {
 }
 
 footer a {
-  color: #1a1a1a;   /* deep accessible blue */
+  color: #003366;   /* deep accessible blue */
 }
 
 footer a:hover {
-  color: #000000;   /* brighter but still compliant */
+  color: #0055ff;   /* brighter but still compliant */
 
 }
+
