@@ -11,9 +11,9 @@ A fast and convenient way to view both the calendar and assignments.
 The metric for success is how much time you save having the assignment open in a new window.
 
 ## Validation Links
-WAVE Link: [https://wave.webaim.org/report#/https://chickenalfredo1121.github.io/ProjectDelta]
+WAVE Link: [https://chickenalfredo1121.github.io/ProjectDelta]
 
-Nu Link: [https://validator.w3.org/nu/?doc=https%3A%2F%2Fwave.webaim.org%2Freport%23%2Fhttps%3A%2F%2Fchickenalfredo1121.github.io%2FProjectDelta]
+Nu Link: [https://validator.w3.org/nu/?doc=https%3A%2F%2Fchickenalfredo1121.github.io%2FProjectDelta%2F]
 
 ## Architecture
 This project has a simple layout with HTML providing structure, CSS controlling presentation, and JavaScript (with JQuery) handling all interactions and page updates.
