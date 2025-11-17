@@ -217,3 +217,11 @@ body {
 .calendar-reference-images img:nth-child(2) {
   max-width: 45%;
 }
+
+footer a {
+  color: #004A8F;   /* deep accessible blue */
+}
+
+footer a:hover {
+  color: #0067C2;   /* brighter but still compliant */
+}
